@@ -1,21 +1,21 @@
 <div class="row">
-  <div class="col s6">
+  <div class="col s12 m6">
     <section class="card">
       <div class="card-content">
         <div class="card-title">Profile</div>
-        <button class="btn" (click)="showProfile = !showProfile">{{ showProfile ? 'Hide' : 'Show'}} Profile</button>
         <div *ngIf="showProfile">
-          <pre>
-            Phone number: 555-123-1345
-            Email address: test@abccompany.com
-            Address: 1 Main Street, St. Louis, MO 63105
-          </pre>
+          Phone number: 555-123-1345 <br>
+          Email address: test@abccompany.com <br>
+          Address: 1 Main Street, St. Louis, MO 63105 <br>
         </div>
+      </div>
+      <div class="card-action">
+        <button class="btn" (click)="showProfile = !showProfile">{{ showProfile ? 'Hide' : 'Show'}} Profile</button>
       </div>
     </section>
   </div>
 
-  <div class="col s6">
+  <div class="col s12 m6">
     <section class="card">
       <div class="card-content">
         <div class="card-title">Todo List</div>
@@ -29,7 +29,7 @@
 </div>
 
 <div class="row">
-  <div class="col s6">
+  <div class="col s12 m6">
     <section class="card">
       <div class="card-content">
         <div class="card-title">Upcoming Meetings</div>
@@ -40,7 +40,7 @@
     </section>
   </div>
 
-  <div class="col s6">
+  <div class="col s12 m6">
     <section class="card">
       <div class="card-content">
         <div class="card-title">Who is in meetings</div>
