@@ -5,13 +5,17 @@ const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   {
     path: 'dashboard',
-    loadChildren:
-      './user-dashboard/user-dashboard.module#UserDashboardModule'
+    loadChildren: () =>
+      import('./user-dashboard/user-dashboard.module').then(
+        m => m.UserDashboardModule
+      )
   },
   {
     path: 'employees',
-    loadChildren:
-      './employee-browser/employee-browser.module#EmployeeBrowserModule'
+    loadChildren: () =>
+      import('./employee-browser/employee-browser.module').then(
+        m => m.EmployeeBrowserModule
+      )
   }
 ];
 
