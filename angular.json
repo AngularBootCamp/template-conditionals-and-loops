@@ -1,6 +1,5 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "defaultProject": "template-conditionals-and-loops",
   "newProjectRoot": "projects",
   "projects": {
     "template-conditionals-and-loops": {
