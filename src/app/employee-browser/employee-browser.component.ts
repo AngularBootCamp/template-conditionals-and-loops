@@ -21,7 +21,7 @@ const employees = [
 ];
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-employee-browser',
   templateUrl: './employee-browser.component.html'
 })
 export class EmployeeBrowserComponent {

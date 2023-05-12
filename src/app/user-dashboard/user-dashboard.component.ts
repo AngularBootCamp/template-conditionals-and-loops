@@ -19,7 +19,7 @@ const todoList = [
 ];
 
 @Component({
-  selector: 'user-dashboard',
+  selector: 'app-user-dashboard',
   templateUrl: './user-dashboard.component.html'
 })
 export class UserDashboardComponent {
