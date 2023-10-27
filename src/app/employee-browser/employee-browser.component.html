@@ -6,6 +6,7 @@
   </button>
 
   <ul class="collection">
+    <!-- Tip: ngFor requires let and not const. -->
     <li *ngFor="let employee of employeeList">
       <strong>{{ employee.name }}</strong>
       <div *ngFor="let role of employee.roles; index as i">
