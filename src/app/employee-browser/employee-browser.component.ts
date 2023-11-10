@@ -1,3 +1,4 @@
+import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 
 const employees = [
@@ -22,9 +23,11 @@ const employees = [
 
 @Component({
   selector: 'app-employee-browser',
-  templateUrl: './employee-browser.component.html'
+  templateUrl: './employee-browser.component.html',
+  standalone: true,
+  imports: [NgFor, NgIf]
 })
-export class EmployeeBrowserComponent {
+export default class EmployeeBrowserComponent {
   employeeList = employees;
   showInactiveRoles = true;
 }

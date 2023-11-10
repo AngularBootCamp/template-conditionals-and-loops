@@ -1,3 +1,4 @@
+import { NgIf, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 
 const meetings = [
@@ -20,9 +21,11 @@ const todoList = [
 
 @Component({
   selector: 'app-user-dashboard',
-  templateUrl: './user-dashboard.component.html'
+  templateUrl: './user-dashboard.component.html',
+  standalone: true,
+  imports: [NgIf, NgFor]
 })
-export class UserDashboardComponent {
+export default class UserDashboardComponent {
   showProfile = true;
   nextMeetings = meetings;
   todos = todoList;

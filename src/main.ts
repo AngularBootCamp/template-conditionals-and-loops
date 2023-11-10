@@ -1,10 +1,22 @@
 // https://github.com/stackblitz/core/issues/2366
 import 'zone.js'; // Avoid error in StackBlitz for Angular polyfill
 
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import {
+  provideRouter,
+  withHashLocation,
+  withInMemoryScrolling
+} from '@angular/router';
 
-import { AppModule } from './app/app.module';
+import { AppComponent } from './app/app.component';
+import { routes } from './app/app.routes';
 
-platformBrowserDynamic()
-  .bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+void bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(
+      routes,
+      withHashLocation(),
+      withInMemoryScrolling({ scrollPositionRestoration: 'enabled' })
+    )
+  ]
+});
