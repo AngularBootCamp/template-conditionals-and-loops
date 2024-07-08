@@ -7,13 +7,19 @@
 
   <ul class="collection">
     <!-- Tip: ngFor requires let and not const. -->
-    <li *ngFor="let employee of employeeList">
-      <strong>{{ employee.name }}</strong>
-      <div *ngFor="let role of employee.roles; index as i">
-        <span *ngIf="showInactiveRoles || i === 0">
-          {{ role }}
-        </span>
-      </div>
-    </li>
+    @for (employee of employeeList; track employee) {
+      <li>
+        <strong>{{ employee.name }}</strong>
+        @for (role of employee.roles; track role; let i = $index) {
+          <div>
+            @if (showInactiveRoles || i === 0) {
+              <span>
+                {{ role }}
+              </span>
+            }
+          </div>
+        }
+      </li>
+    }
   </ul>
 </article>
